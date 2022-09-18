@@ -15,7 +15,7 @@ pros::Imu inertial_sensor(10);
 
 pros::ADIEncoder Y_encoder1('A', 'B', true);
 pros::ADIEncoder Y_encoder2('C', 'D', false);
-pros::ADIEncoder X_encoder('E', 'F', true);
+pros::ADIEncoder X_encoder('E', 'F', false);
 // pros::ADIPort touch_sensor(TOUCH_SENSOR_PORT, pros::E_ADI_ANALOG_IN);
 ////
 
@@ -149,8 +149,9 @@ double y=0;
 
 
     x += degreesToCm(xEncoderUpdate, 2.75) * cos(heading) + 
-           degreesToCm(yEncoderUpdate, 2.75) * sin(heading) ;
-    y +=  degreesToCm(yEncoderUpdate, 2.75) * cos(heading) + degreesToCm(xEncoderUpdate, 2.75) * sin(heading);
+          degreesToCm(yEncoderUpdate, 2.75) * sin(heading) ;
+    y +=  degreesToCm(yEncoderUpdate, 2.75) * cos(heading) + 
+          degreesToCm(xEncoderUpdate, 2.75) * sin(heading);
 
     pros::lcd::print(3, "Heading:%.1f", heading);
     pros::lcd::print(4, "x:%.1f", x);
