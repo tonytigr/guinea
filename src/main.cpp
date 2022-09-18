@@ -18,7 +18,6 @@ pros::ADIEncoder Y_encoder2('C', 'D', false);
 pros::ADIEncoder X_encoder('E', 'F', false);
 // pros::ADIPort touch_sensor(TOUCH_SENSOR_PORT, pros::E_ADI_ANALOG_IN);
 ////
-//test
 // pros::ADIDigitalIn limit_switch(LIMIT_SWITCH_PORT);
 // pros::ADIDigitalIn limit_switch({{EXTENDER_PORT, LIMIT_SWITCH_PORT}});
 
